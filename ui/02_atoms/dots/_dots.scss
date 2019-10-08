@@ -1,0 +1,28 @@
+.dots {
+	position: relative;
+	display: block;
+	width: .5px;
+	height: 220px;
+	border: 1px dashed rgba(color('light'), .45);
+
+	&:before,
+	&:after {
+		transform: translateX(-50%);
+		position: absolute;
+		left: 50%;
+		display: block;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background-color: color('light');
+		content: '';
+	}
+
+	&:before {
+		top: 50px;
+	}
+
+	&:after {
+		bottom: 50px;
+	}
+}

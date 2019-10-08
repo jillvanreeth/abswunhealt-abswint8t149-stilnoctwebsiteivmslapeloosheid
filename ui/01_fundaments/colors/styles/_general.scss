@@ -1,0 +1,14 @@
+#{$theBody} {
+	color: color('light');
+	background-color: color('morning');
+}
+
+::selection {
+	color: #fff;
+	background: color('action');
+}
+
+::-moz-selection {
+	color: #fff;
+	background: color('action');
+}

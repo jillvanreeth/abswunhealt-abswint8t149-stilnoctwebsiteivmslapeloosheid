@@ -1,0 +1,48 @@
+.mainNav {
+	@include media('medium') {
+		align-items: center;
+		justify-content: flex-end;
+		flex-direction: row;
+		font-weight: 700;
+	}
+
+	display: flex;
+	flex: 1 0 auto;
+	flex-direction: column;
+	font-family: font('main');
+	font-weight: 400;
+}
+
+.mainNav__item {
+	@include media('medium') {
+		padding: 0 gap('small');
+		font-size: fontSize('medium');
+		letter-spacing: 1.67px;
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	display: block;
+	flex: 0 0 auto;
+	font-size: fontSize('xxlarge');
+}
+
+.mainNav__link {
+	@include media('medium') {
+		padding: 0;
+		color: color('basics-0');
+	}
+
+	display: block;
+	padding-top: gap('xsmall');
+	color: color('night');
+	text-decoration: none;
+
+	&:hover,
+	&.active,
+	.sticky & {
+		color: color('night');
+	}
+}

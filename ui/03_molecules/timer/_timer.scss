@@ -1,0 +1,11 @@
+.timer {
+	@include media('medium') {
+		padding-top: 0;
+	}
+
+	transition: opacity ease-in 300ms;
+	padding-top: gap('large');
+	color: color('light');
+	font-size: fontSize('small');
+	opacity: 0;
+}

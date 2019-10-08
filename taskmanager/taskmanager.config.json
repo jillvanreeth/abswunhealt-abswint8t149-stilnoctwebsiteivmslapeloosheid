@@ -1,0 +1,42 @@
+{
+  "framework": "",
+  "vhost": "abswint8t149.tdlinx.int",
+  "browserSupport": [
+    "ie >= 11",
+    "last 1 Firefox version",
+    "last 1 Chrome version",
+    "last 1 Opera version"
+  ],
+  "directories": {
+    "clean": [
+      "../dist"
+    ],
+    "cwd": "../ui",
+    "dest": {
+      "default": "../dist"
+    }
+  },
+  "dirNames": {
+    "views": "views",
+    "sections": "sections",
+    "resources": "resources"
+  },
+  "favicon": {
+    "appName": "Wunderman",
+    "masterPicture": "../ui/00_global/favicon.png",
+    "targetFile": "../dist/index.php",
+    "iconFolder": "../dist/resources/icons/",
+    "iconPath": "resources/icons/",
+    "backgroundColor": "#ffffff",
+    "brandColor": "#000000",
+    "ios": {
+      "pictureAspect": "backgroundAndMargin"
+    },
+    "windows": {
+      "pictureAspect": "noChange"
+    },
+    "androidChrome": {
+      "pictureAspect": "backgroundAndMargin"
+    }
+  }
+}

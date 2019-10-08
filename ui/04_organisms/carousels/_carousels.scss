@@ -1,0 +1,20 @@
+.carousels {
+	overflow: hidden;
+}
+
+.carousels__header {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.carousels__clock {
+	@include media('small') {
+		font-size: titleSize('h2');
+	}
+
+	padding-top: gap('xxsmall');
+	font-family: font('main');
+	font-size: fontSize('large');
+	font-weight: 700;
+}

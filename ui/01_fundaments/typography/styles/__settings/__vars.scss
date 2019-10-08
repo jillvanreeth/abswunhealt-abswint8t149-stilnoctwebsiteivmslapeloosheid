@@ -1,0 +1,30 @@
+$fonts: (
+	'main': (
+		'normal'  : 'Quicksand',
+	),
+	'special': (
+		'normal'  : 'Roboto'
+	)
+);
+
+$fontSizes: (
+	'inherit' : inherit,
+	'xxsmall' : 10px,
+	'xsmall'  : 12px,
+	'small'   : 14px,
+	'medium'  : 16px,
+	'large'   : 18px,
+	'xlarge'  : 22px,
+	'xxlarge' : 25px,
+);
+
+$titleSizes: (
+	'inherit' : inherit,
+	'h6'  	  : 14px,
+	'h5'      : 16px,
+	'h4'      : 22px,
+	'h3'      : 25px,
+	'h2'      : 32px,
+	'h1'      : 40px,
+	'h0'      : 60px
+);

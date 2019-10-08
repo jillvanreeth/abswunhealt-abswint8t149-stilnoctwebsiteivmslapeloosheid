@@ -1,0 +1,73 @@
+
+.button {
+	transition: color 150ms, border-color 150ms, background-color 150ms;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 32px;
+	margin: 0;
+	padding: 0 gap('xsmall');
+	color: color('light');
+	font-family: font('main');
+	font-size: inherit;
+	font-weight: 500;
+	line-height: 1;
+	text-decoration: none;
+	letter-spacing: 1.65px;
+	border: 2px solid color('night');
+	border-radius: 0;
+	background-color: color('night');
+	cursor: pointer;
+
+	&:hover:not(.disabled) {
+		color: color('night');
+		border-color: color('light');
+		background-color: color('light');
+	}
+
+	&.inverted {
+		color: color('night');
+		border-color: color('light');
+		background-color: color('light');
+		
+		&:hover:not(.disabled) {
+			color: color('light');
+			border-color: color('night');
+			background-color: color('night');
+		}		
+	}
+
+	&.disabled {
+		cursor: default;
+	}
+}
+
+.button--fluid {
+	display: flex;
+	width: 100%;
+}
+
+.button--ghost {
+	color: color('light');
+	border-color: color('light');
+	background-color: transparent;
+}
+
+
+.button--special {
+	min-width: 220px;
+	height: 52px;
+	color: color('light');
+	font-family: font('special');
+	font-size: fontSize('xxlarge');
+	font-weight: 700;
+	letter-spacing: -.01px;
+	border-color: color('action');
+	border-radius: 27px;
+	background-color: color('action');
+
+	&:hover {
+		color: color('action');
+		background-color: color('light');
+	}
+}

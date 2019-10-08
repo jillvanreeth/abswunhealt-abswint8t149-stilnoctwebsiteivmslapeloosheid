@@ -1,0 +1,27 @@
+.contact {
+	display: block;
+	padding-top: gap('small');
+}
+
+.contact__item {
+	padding-top: gap('xlarge');
+	font-family: font('special');
+	font-size: fontSize('large');
+	font-weight: 300;
+	line-height: 1.5;
+
+	&:first-child {
+		padding-top: 0;
+	}
+}
+
+.contact__title {
+	font-family: font('special');
+	font-size: titleSize('h3');
+	font-weight: 700;
+}
+
+.contact__cta {
+	display: block;
+	padding-top: gap('small');
+}

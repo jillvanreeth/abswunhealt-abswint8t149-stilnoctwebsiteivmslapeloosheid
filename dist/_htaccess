@@ -1,0 +1,15 @@
+# URL rewrite
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+
+	# redirect favicon/manifest root requests to resources
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_URI} .*/(favicon|mstile|apple-touch-icon|android-chrome|browserconfig|safari-pinned-tab|site)(-\d+x\d+)?\.(png|svg|ico|webmanifest|xml)
+	RewriteRule ^((?!resources/icons/).*)$ /resources/icons/$1 [L]
+
+    # redirect all to index.php with querystring
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)\/{0,1}$ /index.php?queryVar=$1 [QSA,NC,L]
+</IfModule>

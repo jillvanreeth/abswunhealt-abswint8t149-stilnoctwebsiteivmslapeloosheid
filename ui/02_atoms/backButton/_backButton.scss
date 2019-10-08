@@ -1,0 +1,105 @@
+.backButton {
+	@include media('medium') {
+		top: - gap('small');
+		left: 0;
+		position: relative;
+	}
+
+	position: absolute;
+	top: gap('xxsmall');
+	left: gap('xxsmall');
+	display: block;
+	text-align: left;
+}
+
+.backButton__button {
+	@include media('medium') {
+		border: 2px solid;
+	}
+
+	transition: background-color 150ms;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 32px;
+	margin: 0;
+	padding: 0 gap('xsmall');
+	color: color('night');
+	font-family: font('main');
+	font-size: fontSize('medium');
+	font-weight: 500;
+	line-height: 1;
+	text-decoration: none;
+	letter-spacing: 1.65px;
+	border-color: color('night');
+	background-color: transparent;
+	cursor: pointer;
+
+	& > * {
+		margin-left: gap('xsmall');
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	&:hover {
+		color: color('light');
+		border-color: color('night');
+		background-color: color('night');
+	}
+
+	&.inverted {
+		color: color('light');
+		border-color: color('light');
+		background-color: transparent;
+
+		&:hover {
+			color: color('night');
+			border-color: color('light');
+			background-color: color('light');
+		}
+	}
+}
+
+.backButton__label {
+	@include media('medium') {
+		display: block;
+	}
+
+	display: none;
+	flex: 0 1 auto;
+}
+
+.backButton__icon {
+	@include media('medium') {
+		width: fontSize('small');
+		height: fontSize('small');
+	}
+
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	justify-content: center;
+	width: fontSize('xlarge');
+	height: fontSize('xlarge');
+
+	svg {
+		display: block;
+		width: 100%;
+		height: 100%;
+		fill: color('night');
+
+		.backButton__button:hover & {
+			fill: color('light');
+		}
+
+		.backButton__button.inverted & {
+			fill: color('light');
+		}
+
+		.backButton__button.inverted:hover & {
+			fill: color('night');
+		}
+	}
+}

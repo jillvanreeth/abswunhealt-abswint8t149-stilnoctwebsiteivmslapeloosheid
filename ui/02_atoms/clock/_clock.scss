@@ -1,0 +1,47 @@
+.clock {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.clock__inner {
+	@include media('small') {
+		width: 80px;
+		height: 80px;
+	}
+
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-color: color('basics-0');
+}
+
+.clock__icon {
+	@include media('small') {
+		width: 36px;
+		height: 36px;
+	}
+
+	transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: block;
+	width: 30px;
+	height: 30px;
+	svg {
+		fill: #000;
+	}
+}
+
+.clock__title {
+	display: block;
+	padding-top: gap('xsmall');
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+}

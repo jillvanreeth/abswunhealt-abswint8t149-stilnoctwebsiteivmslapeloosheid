@@ -1,0 +1,111 @@
+.dropdown {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: section('medium');
+	margin: 0 auto;
+	margin-bottom: gap('small');
+	padding-top: gap('medium');
+	border-bottom: 4px solid color('light');
+
+	&.dropdown-is-open {
+		border-bottom: none;
+	}
+}
+
+.dropdown__title {
+	@include media('small') {
+		font-size: titleSize('h4');
+	}
+
+	font-family: font('main');
+	font-size: fontSize('large');
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.dropdown__trigger {
+	@include media('large') {
+		font-size: titleSize('h1');
+	}
+	@include media('medium') {
+		padding: gap('small') gap('medium') gap('xsmall');
+		font-size: titleSize('h2');
+	}
+
+	position: relative;
+	padding: gap('small') gap('small') gap('xsmall') 0;
+	font-family: font('main');
+	font-size: titleSize('h3');
+	font-weight: 700;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.dropdown__symbol {
+	@include media('medium') {
+		right: gap('xsmall');
+		width: 24px;
+		height: 15px;
+	}
+
+	transition: transform ease 300ms;
+	position: absolute;
+	right: 0;
+	bottom: gap('xsmall');
+	display: block;
+	width: 20px;
+	height: 12px;
+
+	.dropdown-is-open & {
+		transform: rotate(180deg);
+	}
+}
+
+.dropdown__item {
+	@include media('large') {
+		font-size: titleSize('h1');
+	}
+	@include media('medium') {
+		padding: gap('xsmall') gap('medium') gap('xsmall');
+		font-size: titleSize('h2');
+	}
+
+	padding: 0 0 gap('small');
+	font-family: font('main');
+	font-size: titleSize('h3');
+	font-weight: 700;
+	line-height: 1;
+	cursor: pointer;
+
+	&:before {
+		display: block;
+		width: 70px;
+		height: 2px;
+		margin: 0 auto gap('xsmall');
+		background-color: color('light');
+		content: '';;
+	}
+
+	&.dropdown-is-selected {
+		display: none;
+	}
+}
+
+.dropdown__target {
+	@include media('medium') {
+		padding: 0 gap('medium');
+	}
+
+	transition: max-height ease-in 300ms;
+	position: relative;
+	display: block;
+	height: 0;
+	max-height: 0;
+	overflow: hidden;
+
+	.dropdown-is-open & {
+		height: auto;
+		max-height: 1000px;
+	}
+}

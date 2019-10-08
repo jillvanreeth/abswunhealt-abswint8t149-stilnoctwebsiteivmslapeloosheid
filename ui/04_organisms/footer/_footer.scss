@@ -1,0 +1,26 @@
+.footer {
+	color: color('neutrals-0');
+	font-size: fontSize('small');
+	background-color: color('neutrals-1');
+}
+
+.footer__inner {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	max-width: section('xlarge');
+	margin: 0 auto;
+	padding: gap('small') gap('xsmall');
+}
+
+.footer__item {
+	padding-top: gap('small');
+
+	&:first-child {
+		@include media('medium') {
+			align-self: flex-end;
+		}
+
+		padding-top: 0;
+	}
+}

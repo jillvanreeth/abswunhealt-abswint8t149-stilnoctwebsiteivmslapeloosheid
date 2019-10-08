@@ -1,0 +1,46 @@
+.dotsNav {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	padding-top: gap('medium');
+}
+
+.dotsNav__item {
+	display: flex;
+	align-items: center;
+
+	&:after {
+		display: block;
+		width: 35px;
+		height: 1px;
+		border: 1px dashed rgba(color('light'), .45);
+		content: '';
+	}
+
+	&:last-child::after {
+		display: none;
+	}
+}
+
+.dotsNav__link {
+	transition: color ease 300ms;
+	display: block;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background-color: color('light');
+
+	&:hover,
+	&.active {
+		background-color: color('night');
+	}
+
+	.dotsNav.inverted & {
+		background-color: color('neutrals-0');
+
+		&:hover,
+		&.active {
+			background-color: color('light');
+		}
+	}
+}

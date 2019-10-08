@@ -1,0 +1,8 @@
+.langNav__link {
+	color: inherit;
+	text-decoration: none;
+
+	&:hover {
+		color: color('neutrals-0','darker');
+	}
+}

@@ -1,0 +1,136 @@
+// ios overflow fix
+.overflow-is-hidden {
+	height: 100vh;
+	overflow: hidden;
+}
+
+.header {
+	@include media('medium') {
+		transition: transform 300ms ease;
+		padding: 0;
+		
+		&.sticky {
+			transform: translateY(100px);
+			position: fixed;
+			top: -100px;
+			left: 0;
+			z-index: 9999;
+			background-color: color('basics-0');
+		}
+	}
+
+	display: block;
+	width: 100%;
+}
+
+.header__menuIcon {
+	@include media('medium') {
+		display: none;
+	}
+
+	position: fixed;
+	top: gap('xsmall');
+	right: 4px;
+	z-index: 9999;
+	cursor: pointer;
+}
+
+
+.header__inner {
+	@include media('medium') {
+		transform: none;
+		position: relative;
+		display: flex;
+		flex: 1 1 auto;
+		justify-content: space-between;
+		flex-direction: row;
+		width: 100%;
+		max-width: section('xlarge');
+		height: auto;
+		margin: 0 auto;
+		padding: gap('xsmall') gap('xsmall');
+		background: transparent;
+	}
+
+	transition: transform ease-in-out 300ms;
+	transform: translateX(-100%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	display: block;
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+	padding: gap('xsmall') gap('xsmall') gap('medium');
+	overflow-x: hidden;
+	background: linear-gradient(180deg, #FF923E 20%, #DB844D 80%, #705C7A 100%);
+
+	.open & {
+		transform: translateX(0);
+		position: fixed;
+		overflow-y: auto;
+	}
+}
+
+.header__group {
+	@include media('medium') {
+		.header > & {
+			display: none;
+		}
+	}
+
+	flex: 1 1 auto;
+	color: color('light');
+	text-decoration: none;
+}
+
+.header__title {
+	@include media('medium') {
+		font-size: titleSize('h2');
+		
+.sticky & {
+		color: color('night');
+	}
+	}
+
+	color: color('light');
+	font-size: fontSize('xlarge');
+	line-height: 1;
+	text-decoration: none;
+
+
+	
+}
+
+.header__subtitle {
+	@include media('medium') {
+		width: auto;
+		font-size: titleSize('h5');
+	}
+
+	width: 60%;
+	color: color('light');
+	font-size: fontSize('small');
+	text-decoration: none;
+
+	.sticky & {
+		display: none;
+	}
+}
+
+.header__dropdown {
+	@include media('medium') {
+		display: none;
+	}
+
+	display: block;
+}
+
+.header__langNav {
+	@include media('medium') {
+		display: none;
+	}
+
+	padding-top: gap('small');
+}

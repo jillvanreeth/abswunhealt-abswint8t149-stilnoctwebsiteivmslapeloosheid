@@ -1,0 +1,78 @@
+.legalNav {
+	font-family: font('special');
+	font-size: fontSize('xsmall');
+	text-align: center;
+	letter-spacing: .01px;
+}
+
+.legalNav__theNav {
+	@include media('small') {
+		padding-top: gap('xxsmall');
+	}
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding-top: gap('xsmall');
+}
+
+.legalNav__item {
+	display: flex;
+	align-items: center;
+	padding-left: gap('xxsmall');
+
+	&:before {
+		display: block;
+		padding-right: gap('xxsmall');
+		font-size: 12px;
+		content: '|';
+	}
+
+	&:first-child {
+		@include media('small') {
+			flex: 0 1 auto;
+			padding-left: 0;
+		}
+
+		flex: 1 0 100%;
+		align-items: center;
+		justify-content: center;
+		
+		&:before {
+			display: none;
+		}
+	}
+
+	&:nth-child(2) {
+		&:before {
+			display: none;
+		}
+
+		@include media('small') {
+			&:before {
+				display: block;
+			}
+		}
+	}
+}
+
+.legalNav__link {
+	color: color('neutrals-0');
+	text-decoration: underline;
+
+	&:hover {
+		color: color('neutrals-0','darker');
+	}
+}
+
+.legalNav__desc {
+	@include media('small') {
+		padding-top: gap('xxsmall');
+	}
+
+	display: block;
+	padding-top: gap('xsmall');
+	font-weight: 300;
+	text-align: center;
+}

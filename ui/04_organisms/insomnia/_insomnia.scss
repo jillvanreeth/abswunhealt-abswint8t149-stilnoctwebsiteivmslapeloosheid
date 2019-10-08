@@ -1,0 +1,21 @@
+.insomnia__title {
+	@include media('small') {
+		font-size: titleSize('h1');
+	}
+
+	display: block;
+	padding: 0 gap('xsmall');
+	font-family: font('main');
+	font-size: titleSize('h2');
+	font-weight: 700;
+}
+
+.insomnia__video {
+	@include media('small') {
+		max-width: section('medium');
+	}
+
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}

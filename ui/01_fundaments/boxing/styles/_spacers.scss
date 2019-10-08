@@ -1,0 +1,27 @@
+.spacer--in {
+	padding-top: gap('large'); padding-bottom: gap('xlarge');
+
+	@include media('medium') {
+		padding-top: gap('large'); padding-bottom: gap('xxlarge');
+	}
+}
+
+.spacer--in-top {
+	padding-top: gap('small');
+
+	@include media('medium') {
+		padding-top: gap('large');
+	}
+}
+
+.spacer--in-bottom {
+	padding-bottom: gap('small');
+
+	@include media('medium') {
+		padding-bottom: gap('large');
+	}
+
+	@include media('large') {
+		padding-bottom: gap('xlarge');
+	}
+}

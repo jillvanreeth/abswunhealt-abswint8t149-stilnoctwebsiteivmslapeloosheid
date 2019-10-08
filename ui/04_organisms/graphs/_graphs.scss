@@ -1,0 +1,122 @@
+.graphs__section {
+	@include media('small') {
+		padding-bottom: gap('xxlarge');
+	}
+
+	padding-bottom: gap('large');
+	border-bottom: 2px solid rgba(color('light'), .5);
+
+	&:last-child {
+		padding-bottom: 0;
+		border-bottom: none;
+	}
+}
+
+.graphs__buttonWrap {
+	@include media('small') {
+		padding: 0 gap('large');
+	}
+	@include media('medium') {
+		justify-content: center;
+		flex-direction: row;
+		padding: 0 gap('xsmall');
+	}
+
+	display: flex;
+	flex-direction: column;
+	max-width: section('xsmall');
+	margin: 0 auto;
+}
+
+.graphs__button {
+	@include media('medium') {
+		width: auto;
+		padding-top: 0;
+		padding: 0 gap('xsmall');
+	}
+
+	width: 100%;
+	padding-top: gap('xsmall');
+
+	&:first-child {
+		padding-top: 0;
+	}
+}
+
+.graphs__inner {
+	@include media('small') {
+		padding: gap('large') gap('xsmall') 0;
+	}
+
+	width: 100%;
+	max-width: section('small');
+	margin: 0 auto;
+	padding: gap('medium') 0 0;
+}
+
+.graphs__item {
+	@include media('small') {
+		padding-top: gap('xlarge');
+	}
+
+	display: block;
+	padding-top: gap('medium');
+
+	&:first-child {
+		padding-top: 0;
+	}
+}
+
+.graphs__title {
+	@include media('small') {
+		font-size: titleSize('h1');
+	}
+
+	font-family: font('main');
+	font-size: titleSize('h2');
+	font-weight: 700;
+}
+
+.graphs__title--smaller {
+	font-size: fontSize('large');
+}
+
+.graphs__content {
+	@include media('small') {
+		padding-top: gap('small');
+		font-size: fontSize('xlarge');
+	}
+
+	display: block;
+	padding-top: gap('xsmall');
+	font-family: font('special');
+	font-size: fontSize('large');
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+.graphs__visual {
+	display: block;
+	padding-top: gap('xsmall');
+
+	& > * {
+		display: block;
+		width: 100%;
+	}
+}
+
+.graphs__subcontent {
+	@include media('small') {
+		font-size: titleSize('h2');
+	}
+
+	display: block;
+	width: 100%;
+	max-width: section('xsmall');
+	margin: 0 auto;
+	padding-top: gap('small');
+	font-family: font('main');
+	font-size: titleSize('h3');
+	font-weight: 300;
+	line-height: 1.5;
+}

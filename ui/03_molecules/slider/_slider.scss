@@ -1,0 +1,148 @@
+.slider {
+	position: relative;
+	padding-top: gap('medium');
+}
+
+.slider__item {
+	@include media('large') {
+		&:not(.slick-center) {
+			transform: scale(.9);
+			opacity: .6;
+		}
+	}
+
+	transition: transform ease-out 300ms;
+	position: relative;
+	display: block;
+	width: 100%;
+	max-width: section('small')*1.2;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.slider__sizer {
+	@include media('small') {
+		padding-top: 50%;
+	}
+
+	position: relative;
+	height: 0;
+	padding-top: 100%;
+}
+
+.slider__item__inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+
+.slider__content {
+	@include media('large') {
+		width: 80%;
+	}
+	@include media('medium') {
+		width: 70%;
+	}
+
+	position: relative;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	width: 75%;
+	height: 100%;
+	padding: 80px gap('small');
+	border-radius: 11px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.07);
+
+	.slider--morning & {
+		background-color: color('morning');
+	}
+
+	.slider--noon & {
+		background-color: color('noon');
+	}
+
+	.slider--night & {
+		background-color: color('night');
+	}
+}
+
+.slider__title {
+	@include media('medium') {
+		font-size: titleSize('h0');
+		line-height: .9;
+	}
+
+	font-size: titleSize('h3');
+	line-height: 1.2;
+
+	align-self: center;
+}
+
+.slider__cta {
+	position: absolute;
+	right: 0;
+	bottom: 30px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.slider__link {
+	@include media('medium') {
+		font-size: fontSize('xlarge');
+	}
+
+	color: color('light');
+	font-family: font('special');
+	font-size: fontSize('large');
+	font-weight: 300;
+	text-decoration: underline;
+}
+
+.slider__buttonWrap {
+	transform: translate(-50%,-50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	max-width: section('small')*1.2;
+}
+
+.slider__button {
+	@include media('small') {
+		width: 25px;
+	}
+
+	transform: translateY(-50%);
+	position: absolute;
+	top: 50%;
+	display: block;
+	width: 15px;
+	cursor: pointer;
+}
+
+.slider__button--left {
+	@include media('large') {
+		left: -25px;
+	}
+
+	left: 10px;
+}
+
+.slider__button--right {
+	@include media('large') {
+		right: -25px;
+	}
+
+	right: 10px;
+}

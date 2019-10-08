@@ -1,0 +1,32 @@
+.brand {
+	@include media('medium') {
+		display: none;
+	}
+
+	position: absolute;
+	top: gap('xsmall');
+	left: gap('xsmall');
+}
+
+.brand__group {
+	flex: 1 1 auto;
+}
+
+.brand__title {
+	@include media('small') {
+		font-size: titleSize('h2');
+	}
+
+	font-size: fontSize('xlarge');
+	line-height: 1;
+}
+
+.brand__subtitle {
+	@include media('small') {
+		width: auto;
+		font-size: titleSize('h5');
+	}
+
+	width: 60%;
+	font-size: fontSize('small');
+}
